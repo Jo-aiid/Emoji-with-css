@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.emojis {
+  --enoji-size: 200px;
+
+  height: var(--enoji-size);
+  width: var(--enoji-size);
+  margin: 1rem;
+}
+.head {
+  height: 100%;
+  width: 100%;
+  background-color: #ffc83d;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+.eyes {
+  position: absolute;
+  top: calc(var(--enoji-size) * 0.25);
+  left: calc(var(--enoji-size) * 0.5);
+
+  height: calc(var(--enoji-size) * 0.25);
+  width: calc(var(--enoji-size) * 0.5);
+  transform: translate(-50%);
+}
+.eye {
+  position: absolute;
+  width: calc(var(--enoji-size) * 0.075);
+  height: calc(var(--enoji-size) * 0.15);
+  background-color: #000;
+
+  border-radius: 50%;
+}
+.right-eye {
+  left: 100%;
+  transform: translate(-100%);
+}
+.smile {
+  bottom: calc(var(--enoji-size) * 0.15);
+  left: calc(var(--enoji-size) * 0.5);
+  border-radius: 5% 5% 60px 60px;
+}
+.mouth {
+  position: absolute;
+  background-color: #000;
+  width: calc(var(--enoji-size) * 0.6);
+  height: calc(var(--enoji-size) * 0.3);
+  transform: translateX(-50%);
+}
+.open-mouth {
+  width: calc(var(--enoji-size) * 0.25);
+  height: calc(var(--enoji-size) * 0.3);
+  bottom: calc(var(--enoji-size) * 0.15);
+  left: calc(var(--enoji-size) * 0.5);
+  border-radius: 50%;
+}
+.face-mask {
+  position: absolute;
+  background-color: #fff;
+  width: calc(var(--enoji-size) * 0.6);
+  height: calc(var(--enoji-size) * 0.35);
+  transform: none;
+  bottom: calc(var(--enoji-size) * 0.15);
+  left: calc(var(--enoji-size) * 0.2);
+  border-radius: 10%;
+  border: calc(var(--enoji-size) * 0.02) solid #999;
+}
+.strap {
+  position: absolute;
+  width: calc(var(--enoji-size) * 0.5);
+  height: calc(var(--enoji-size) * 0.1);
+  background-color: #fff;
+  border: calc(var(--enoji-size) * 0.02) solid #999;
+  z-index: -2;
+}
+.top-left-strap {
+  transform: rotate(20deg);
+  left: -80%;
+  top: -10%;
+}
+.top-right-strap {
+  transform: rotate(160deg);
+  left: 95%;
+  top: -10%;
+}
+.bottom-left-strap {
+  transform: rotate(160deg);
+  left: -80%;
+  bottom: -10%;
+}
+.bottom-right-strap {
+  transform: rotate(20deg);
+  left: 95%;
+  bottom: -10%;
+}
