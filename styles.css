@@ -15,7 +15,6 @@ body {
 }
 .emojis {
   --enoji-size: 200px;
-
   height: var(--enoji-size);
   width: var(--enoji-size);
   margin: 1rem;
